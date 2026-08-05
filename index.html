@@ -19,14 +19,14 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* 1. Announcement Bar Styles (Cyan Accent) */
+    /* 1. Announcement Bar Styles */
     .announcement-bar {
       background-color: #00D8FF;
       color: #000000;
       text-align: center;
       padding: 10px 16px;
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -35,7 +35,7 @@
       display: none !important;
     } 
 
-    /* 2. Header Layout & Responsive Mobile Navigation */
+    /* 2. Header Layout Styles */
     .navbar {
       background-color: #ffffff;
       border-bottom: 1px solid #f3f4f6;
@@ -55,10 +55,10 @@
       gap: 24px;
     }
 
-    /* Stacked Logo Matching Screenshot 1 */
+    /* Stacked Logo Matching Screenshot */
     .logo {
       font-family: 'Impact', 'Arial Black', sans-serif;
-      font-size: 22px;
+      font-size: 28px;
       font-style: italic;
       font-weight: 900;
       text-transform: uppercase;
@@ -103,7 +103,7 @@
       white-space: nowrap;
       flex-wrap: nowrap;
       margin-right: auto;
-      margin-left: 32px;
+      margin-left: 20px;
     }
 
     .nav-links a {
@@ -169,7 +169,7 @@
       .logo {
         grid-column: 2;
         text-align: center;
-        font-size: 16px;
+        font-size: 18px;
       }
 
       .nav-utilities {
@@ -235,29 +235,27 @@
       }
     }
 
-    /* Left Image Presenter Box */
+    /* Left Side Image Presenter */
     .image-column {
       grid-column: span 12;
       background-color: #EBEBEB;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 32px;
       aspect-ratio: 1 / 1;
       width: 100%;
-      border-radius: 2px;
     }
 
     @media (min-width: 1024px) {
       .image-column {
         grid-column: span 6;
-        padding: 32px;
       }
     }
 
     .image-column img {
-      max-height: 90%;
-      max-width: 90%;
+      max-height: 85%;
+      max-width: 85%;
       object-fit: contain;
     }
 
@@ -275,28 +273,20 @@
       }
     }
 
-    /* Product Title (Unbolded Regular Weight) */
+    /* Product Title Typography (Matching Screenshot 3) */
     .product-title {
-      font-family: 'Impact', 'Arial Black', sans-serif;
-      font-size: 28px;
-      font-weight: 400; /* Regular / non-bold weight */
-      letter-spacing: 0.01em;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
       line-height: 1.2;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-    }
-
-    @media (min-width: 1024px) {
-      .product-title {
-        font-size: 38px;
-      }
+      margin-bottom: 4px;
     }
 
     .product-price {
-      font-size: 18px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 400;
       color: #6b7280;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     /* Color Selection Elements */
@@ -417,9 +407,9 @@
 <body>
 
   <!-- 1. Top Announcement Bar -->
-  <div id="top-announcement" class="announcement-bar">NEW! Quotes Collection is out NOW!</div>
+  <div id="top-announcement" class="announcement-bar"></div>
 
-  <!-- 2. Header Bar -->
+  <!-- 2. Precise Structural Header Bar -->
   <nav class="navbar">
     <div class="navbar-container">
       
@@ -430,7 +420,7 @@
         <span></span>
       </button>
 
-      <!-- Centered/Left Logo -->
+      <!-- Centered Stacked Logo -->
       <a href="index.html" class="logo">
         THE WEATHER
         <span>ENTHUSIAST</span>
@@ -443,7 +433,7 @@
         <a href="./Men%27s%20Apparel/mens_apparel.html" class="data-nav-link">Men's Apparel</a>
         <a href="./Women%27s%20Apparel/womens_apparel.html" class="data-nav-link">Women's Apparel</a>
         <a href="./Kids%20Apparel/kids_apparel.html" class="data-nav-link">Kids Apparel</a>
-        <a href="./Bottoms%2C%20Drinkware%2C%20Gear%2C%20%26%20Accessories/bottoms_drinkware.html" class="data-nav-link">Drinkware, Gear, & Accessories</a>
+        <a href="./Bottoms%2C%20Drinkware%2C%20Gear%2C%20%26%20Accessories/bottoms_drinkware.html" class="data-nav-link">Bottoms, Drinkware, Gear, &, Accessories</a>
         <a href="./Promotional%20%26%20Milestone%20Items/promotional_milestone.html" class="data-nav-link">Promotional & Milestone Items</a>
       </div>
 
@@ -503,7 +493,7 @@
         </div>
       </div>
 
-      <button class="add-to-cart-btn">Add to Cart</button>
+      <button class="add-to-cart-btn">ADD TO CART</button>
     </div>
   </main>
 
