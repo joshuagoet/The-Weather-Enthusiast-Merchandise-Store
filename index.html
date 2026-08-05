@@ -52,13 +52,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 40px;
-      gap: 20px;
+      gap: 0; /* Removing fixed gap to allow auto-margins to center logo */
     }
 
-    /* Stacked Logo (Slightly Larger Font Size on Desktop) */
+    /* Stacked Logo - Desktop Centering Rule */
     .logo {
       font-family: 'Impact', 'Arial Black', sans-serif;
-      font-size: 30px; /* Scaled up slightly from 26px */
+      font-size: 30px;
       font-style: italic;
       font-weight: 900;
       text-transform: uppercase;
@@ -67,8 +67,11 @@
       text-decoration: none;
       color: #000000;
       display: inline-block;
-      text-align: left-center;
+      text-align: left;
       flex-shrink: 0;
+      /* Centers the logo evenly between the left edge padding and the Home button on Desktop */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .logo span {
@@ -103,9 +106,9 @@
       gap: 22px;
       white-space: nowrap;
       flex-wrap: nowrap;
-      margin-left: auto;
-      margin-right: auto;
       align-items: center;
+      margin-left: 0;
+      margin-right: auto;
     }
 
     .nav-links a {
@@ -173,6 +176,8 @@
         grid-column: 2;
         text-align: center;
         font-size: 18px;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .nav-utilities {
@@ -423,7 +428,7 @@
         <span></span>
       </button>
 
-      <!-- Centered Stacked Logo -->
+      <!-- Stacked Logo -->
       <a href="index.html" class="logo">
         THE WEATHER
         <span>ENTHUSIAST</span>
