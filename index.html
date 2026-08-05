@@ -55,16 +55,23 @@
       gap: 24px;
     }
 
+    /* Two-Line Stacked Logo Typography */
     .logo {
       font-family: 'Impact', 'Arial Black', sans-serif;
-      font-size: 28px;
+      font-size: 20px;
       font-style: italic;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.02em;
+      letter-spacing: -0.01em;
+      line-height: 0.88; /* Tight line height matching reference image */
       text-decoration: none;
       color: #000000;
-      white-space: nowrap;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .logo span {
+      display: block; /* Forces ENTHUSIAST to break onto line 2 */
     }
 
     /* Mobile Hamburger Icon (Hidden on Desktop) */
@@ -161,7 +168,7 @@
       .logo {
         grid-column: 2;
         text-align: center;
-        font-size: 18px;
+        font-size: 16px; /* Scaled cleanly for mobile displays */
       }
 
       .nav-utilities {
@@ -269,7 +276,7 @@
       }
     }
 
-    /* Heavy Headline Typography (Matching Screenshot Font Style) */
+    /* Heavy Headline Typography */
     .product-title {
       font-family: 'Impact', 'Arial Black', sans-serif;
       font-size: 28px;
@@ -424,8 +431,11 @@
         <span></span>
       </button>
 
-      <!-- Centered Store Logo -->
-      <a href="index.html" class="logo">THE WEATHER ENTHUSIAST</a>
+      <!-- Centered Stacked Store Logo -->
+      <a href="index.html" class="logo">
+        THE WEATHER
+        <span>ENTHUSIAST</span>
+      </a>
 
       <!-- Navigation Links Container -->
       <div class="nav-links" id="navLinks">
