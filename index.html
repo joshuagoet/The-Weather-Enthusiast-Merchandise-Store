@@ -99,7 +99,7 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Desktop Navigation Links (Bold Text Restored) */
+    /* Desktop Navigation Links (Normal Weight) */
     .nav-links {
       display: flex;
       gap: 22px;
@@ -112,7 +112,7 @@
 
     .nav-links a {
       font-size: 13px;
-      font-weight: 700; /* Bold weight restored */
+      font-weight: 400; /* Regular / non-bold weight */
       color: #1f2937;
       text-decoration: none;
       letter-spacing: 0.01em;
@@ -128,7 +128,7 @@
       align-items: center;
       gap: 18px;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 400;
       flex-shrink: 0;
     }
 
@@ -513,7 +513,7 @@
         bar.classList.add("hidden");
       }
 
-      // 2. Highlight current page link
+      // 2. Highlight current page link cleanly without forced bold weight
       const currentFilename = decodeURIComponent(window.location.pathname.split("/").pop()) || "index.html";
       const navLinks = document.querySelectorAll(".data-nav-link");
 
@@ -523,7 +523,7 @@
 
         if (currentFilename === targetFilename) {
           link.style.color = "#000000";
-          link.style.fontWeight = "700";
+          link.style.fontWeight = "400";
           link.style.cursor = "default";
           
           link.addEventListener("click", function(event) {
