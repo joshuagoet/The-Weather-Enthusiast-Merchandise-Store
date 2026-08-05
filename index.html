@@ -19,7 +19,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* 1. Announcement Bar Styles (Cyan Accent matching reference screenshot) */
+    /* 1. Announcement Bar Styles (Cyan Accent) */
     .announcement-bar {
       background-color: #00D8FF;
       color: #000000;
@@ -55,15 +55,15 @@
       gap: 24px;
     }
 
-    /* Two-Line Stacked Logo Typography */
+    /* Stacked Logo Matching Screenshot 1 */
     .logo {
       font-family: 'Impact', 'Arial Black', sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       font-style: italic;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: -0.01em;
-      line-height: 0.88; /* Tight line height matching reference image */
+      line-height: 0.88;
       text-decoration: none;
       color: #000000;
       display: inline-block;
@@ -71,7 +71,7 @@
     }
 
     .logo span {
-      display: block; /* Forces ENTHUSIAST to break onto line 2 */
+      display: block;
     }
 
     /* Mobile Hamburger Icon (Hidden on Desktop) */
@@ -96,14 +96,14 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Navigation Links Container */
+    /* Desktop Navigation Links */
     .nav-links {
       display: flex;
-      gap: 30px;
+      gap: 24px;
       white-space: nowrap;
       flex-wrap: nowrap;
       margin-right: auto;
-      margin-left: auto;
+      margin-left: 32px;
     }
 
     .nav-links a {
@@ -118,6 +118,7 @@
       color: #000000;
     }
 
+    /* Right Utilities (Currency & Cart) */
     .nav-utilities {
       display: flex;
       align-items: center;
@@ -154,7 +155,7 @@
     @media (max-width: 768px) {
       .navbar-container {
         display: grid;
-        grid-template-columns: 28px 1fr auto; /* Left hamburger, Center Logo, Right utilities */
+        grid-template-columns: 28px 1fr auto;
         height: 70px;
         padding: 0 16px;
         gap: 12px;
@@ -168,7 +169,7 @@
       .logo {
         grid-column: 2;
         text-align: center;
-        font-size: 16px; /* Scaled cleanly for mobile displays */
+        font-size: 16px;
       }
 
       .nav-utilities {
@@ -176,7 +177,6 @@
         gap: 12px;
       }
 
-      /* Slide-down mobile dropdown container */
       .nav-links {
         display: none;
         position: absolute;
@@ -204,7 +204,6 @@
         font-size: 14px;
       }
 
-      /* Hamburger Transformation to 'X' */
       .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(8.5px) rotate(45deg);
       }
@@ -218,11 +217,11 @@
       }
     }
 
-    /* 3. Main Product Page Panel Split & Mobile Scaling */
+    /* 3. Main Product Page Layout */
     .main-layout {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 24px 16px; /* Tight edge padding for mobile screens */
+      padding: 24px 16px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
@@ -236,7 +235,7 @@
       }
     }
 
-    /* Left Side Presenter Box */
+    /* Left Image Presenter Box */
     .image-column {
       grid-column: span 12;
       background-color: #EBEBEB;
@@ -276,11 +275,11 @@
       }
     }
 
-    /* Heavy Headline Typography */
+    /* Product Title (Unbolded Regular Weight) */
     .product-title {
       font-family: 'Impact', 'Arial Black', sans-serif;
       font-size: 28px;
-      font-weight: 900;
+      font-weight: 400; /* Regular / non-bold weight */
       letter-spacing: 0.01em;
       line-height: 1.2;
       margin-bottom: 6px;
@@ -420,7 +419,7 @@
   <!-- 1. Top Announcement Bar -->
   <div id="top-announcement" class="announcement-bar">NEW! Quotes Collection is out NOW!</div>
 
-  <!-- 2. Precise Structural Header Bar -->
+  <!-- 2. Header Bar -->
   <nav class="navbar">
     <div class="navbar-container">
       
@@ -431,7 +430,7 @@
         <span></span>
       </button>
 
-      <!-- Centered Stacked Store Logo -->
+      <!-- Centered/Left Logo -->
       <a href="index.html" class="logo">
         THE WEATHER
         <span>ENTHUSIAST</span>
