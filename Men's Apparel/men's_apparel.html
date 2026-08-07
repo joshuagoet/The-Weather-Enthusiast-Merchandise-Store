@@ -173,7 +173,7 @@
     }
 
     .category-group {
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
 
     /* Sub-section Heading Style */
@@ -405,14 +405,14 @@
     <div class="category-group">
       <h2 class="sub-section-title">The Weather Enthusiast Logo Design</h2>
       <h3 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h3>
-      <div id="mens-products-grid-1" class="products-grid"></div>
+      <div id="weather-enthusiast-products-grid" class="products-grid"></div>
     </div>
 
     <!-- 2. StormStream Logo Design Subcategory -->
     <div class="category-group">
       <h2 class="sub-section-title">StormStream Logo Design</h2>
       <h3 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h3>
-      <div id="mens-products-grid-2" class="products-grid"></div>
+      <div id="stormstream-products-grid" class="products-grid"></div>
     </div>
   </main>
 
@@ -449,8 +449,8 @@
         });
       }
 
-      // 4. Generate 10 Distinct Men's Apparel Items
-      const mensItems = [ 
+      // 4. Data for The Weather Enthusiast Logo Design Items
+      const weatherEnthusiastItems = [ 
         { id: 1, name: "Men's Standard T-Shirts", price: "$29.95", img: "", link: "Standard%20T-Shirts/standard_t_shirt.html" },
         { id: 2, name: "Men's Hailinator Premium Tee #2", price: "$29.95", img: "", link: "../Home/product_detail.html?item=2" }, 
         { id: 3, name: "Men's Velocity Pullover Hoodie #3", price: "$49.95", img: "", link: "../Home/product_detail.html?item=3" }, 
@@ -463,21 +463,37 @@
         { id: 10, name: "Men's Microburst Athletic Tee #10", price: "$32.95", img: "", link: "../Home/product_detail.html?item=10" } 
       ]; 
 
-      // Build product cards HTML markup
-      const cardsHTML = mensItems.map(item => ` 
-        <a href="${item.link}" class="product-card"> 
-          <div class="card-image-box"><img src="${item.img}" alt="${item.name}" /></div> 
-          <div class="card-name">${item.name}</div> 
-          <div class="card-price">${item.price}</div> 
-        </a> 
-      `).join('');
+      // 5. Separate Data for StormStream Logo Design Items
+      const stormStreamItems = [ 
+        { id: 101, name: "Men's StormStream Standard Tee #1", price: "$29.95", img: "", link: "../Home/product_detail.html?item=101" },
+        { id: 102, name: "Men's StormStream Pullover Hoodie #2", price: "$49.95", img: "", link: "../Home/product_detail.html?item=102" }, 
+        { id: 103, name: "Men's StormStream Performance Shirt #3", price: "$34.95", img: "", link: "../Home/product_detail.html?item=103" }, 
+        { id: 104, name: "Men's StormStream Windbreaker #4", price: "$59.95", img: "", link: "../Home/product_detail.html?item=104" }, 
+        { id: 105, name: "Men's StormStream Zip Hoodie #5", price: "$54.95", img: "", link: "../Home/product_detail.html?item=105" }, 
+        { id: 106, name: "Men's StormStream Long Sleeve #6", price: "$38.95", img: "", link: "../Home/product_detail.html?item=106" }, 
+        { id: 107, name: "Men's StormStream Fleece Pullover #7", price: "$48.95", img: "", link: "../Home/product_detail.html?item=107" }, 
+        { id: 108, name: "Men's StormStream Athletic Tee #8", price: "$32.95", img: "", link: "../Home/product_detail.html?item=108" }, 
+        { id: 109, name: "Men's StormStream Graphic Crewneck #9", price: "$44.95", img: "", link: "../Home/product_detail.html?item=109" }, 
+        { id: 110, name: "Men's StormStream Active Tank #10", price: "$27.95", img: "", link: "../Home/product_detail.html?item=110" } 
+      ]; 
 
-      // Populate both product grid containers
-      const gridContainer1 = document.getElementById("mens-products-grid-1"); 
-      const gridContainer2 = document.getElementById("mens-products-grid-2"); 
+      // Helper function to build card grids
+      function renderGrid(itemsArray, containerId) {
+        const container = document.getElementById(containerId);
+        if (container) {
+          container.innerHTML = itemsArray.map(item => ` 
+            <a href="${item.link}" class="product-card"> 
+              <div class="card-image-box"><img src="${item.img}" alt="${item.name}" /></div> 
+              <div class="card-name">${item.name}</div> 
+              <div class="card-price">${item.price}</div> 
+            </a> 
+          `).join('');
+        }
+      }
 
-      if (gridContainer1) gridContainer1.innerHTML = cardsHTML; 
-      if (gridContainer2) gridContainer2.innerHTML = cardsHTML; 
+      // Populate each section with its own distinct items array
+      renderGrid(weatherEnthusiastItems, "weather-enthusiast-products-grid");
+      renderGrid(stormStreamItems, "stormstream-products-grid");
     });
   </script>
 </body>
