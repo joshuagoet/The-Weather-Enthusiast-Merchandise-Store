@@ -224,16 +224,31 @@
       }
 
       .catalog-container {
-        padding: 24px 16px;
+        padding: 20px 14px;
       }
 
       .catalog-title {
         font-size: 28px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
 
+      /* 2-Column Mobile Grid for Cards */
       .products-grid {
-        gap: 24px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px 12px !important;
+      }
+
+      .card-image-box {
+        padding: 12px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .card-name {
+        font-size: 14px;
+      }
+
+      .card-price {
+        font-size: 13px;
       }
     }
 
@@ -255,20 +270,8 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    @media (min-width: 640px) {
-      .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .products-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 24px;
     }
 
     /* Product Cards */
