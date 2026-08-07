@@ -77,7 +77,7 @@
       display: block;
     }
 
-    /* Mobile Hamburger Icon (Hidden on Desktop) */
+    /* Mobile Hamburger Icon */
     .mobile-menu-toggle {
       display: none;
       background: none;
@@ -122,7 +122,7 @@
       color: #000000;
     }
 
-    /* Right Utilities (Currency & Cart) */
+    /* Right Utilities */
     .nav-utilities {
       display: flex;
       align-items: center;
@@ -156,7 +156,286 @@
       opacity: 0.7;
     }
 
-    /* Mobile Viewport Header Rules (<= 768px) */
+    /* 3. Featured Single Product Hero Section */
+    .hero-layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 56px 48px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      border-bottom: 2px solid #f3f4f6;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-layout {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+    }
+
+    .hero-image-column {
+      grid-column: span 12;
+      background-color: #EBEBEB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      aspect-ratio: 1 / 1;
+      width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-image-column {
+        grid-column: span 6;
+      }
+    }
+
+    .hero-image-column img {
+      max-height: 85%;
+      max-width: 85%;
+      object-fit: contain;
+    }
+
+    .hero-details-column {
+      grid-column: span 12;
+      display: flex;
+      flex-direction: column;
+      padding-top: 4px;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-details-column {
+        grid-column: span 6;
+      }
+    }
+
+    .product-title {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .product-price {
+      font-size: 20px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-bottom: 32px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: #6b7280;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .color-container {
+      margin-bottom: 28px;
+    }
+
+    .color-dots-row {
+      display: flex;
+      gap: 14px;
+    }
+
+    .color-dot {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .color-dot.active {
+      outline: 1px solid #000000;
+      outline-offset: 2px;
+    }
+
+    .size-container {
+      margin-bottom: 40px;
+    }
+
+    .size-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .size-guide-link {
+      font-size: 12px;
+      color: #6b7280;
+      text-decoration: underline;
+    }
+
+    .size-guide-link:hover {
+      color: #000000;
+    }
+
+    .sizes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    @media (min-width: 640px) {
+      .sizes-grid {
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+      }
+    }
+
+    .size-box {
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      padding: 12px 0;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color 0.15s ease;
+    }
+
+    .size-box:hover {
+      border-color: #000000;
+    }
+
+    .size-box.active {
+      border-color: #000000;
+      background-color: #ffffff;
+      font-weight: 700;
+    }
+
+    .add-to-cart-btn {
+      width: 100%;
+      background-color: #2f00ff;
+      color: #FFFFFF;
+      border: none;
+      height: 54px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      transition: background-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #1f029e;
+    }
+
+    .add-to-cart-btn:active {
+      transform: scale(0.99);
+    }
+
+    /* 4. Combined All Products Directory Structure */
+    .catalog-layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 48px 24px 60px 24px;
+    }
+
+    .page-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .category-section {
+      margin-bottom: 60px;
+    }
+
+    /* Category Headings Base Rule */
+    .category-heading {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: #000000;
+    }
+
+    /* ALL CAPS rule applied specifically to sub-sections without super-sub-sections under them */
+    .category-section:not(:has(.subcategory-heading)) .category-heading {
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+
+    /* Super-sub-title: Subcategory Headings */
+    .subcategory-heading {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin: 32px 0 16px 0;
+      color: #000000;
+    }
+
+    /* Desktop Product Grid (3 Columns) */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 24px;
+    }
+
+    /* Item Card Component */
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: #000000;
+      transition: transform 0.15s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .product-card-image {
+      background-color: #EBEBEB;
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      padding: 24px;
+    }
+
+    .product-card-image img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+    }
+
+    .product-card-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #000000;
+    }
+
+    .product-card-price {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #6b7280;
+      font-weight: 400;
+    }
+
+    /* Mobile Viewport Rules */
     @media (max-width: 768px) {
       .navbar-container {
         display: grid;
@@ -222,229 +501,82 @@
       .mobile-menu-toggle.active span:nth-child(3) {
         transform: translateY(-8.5px) rotate(-45deg);
       }
-    }
 
-    /* 3. Main Product Page Layout */
-    .main-layout {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 24px 16px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    @media (min-width: 1024px) {
-      .main-layout {
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        padding: 56px 48px;
-        gap: 64px;
+      .hero-layout {
+        padding: 24px 16px;
+        gap: 32px;
       }
-    }
 
-    /* Left Side Image Presenter */
-    .image-column {
-      grid-column: span 12;
-      background-color: #EBEBEB;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px;
-      aspect-ratio: 1 / 1;
-      width: 100%;
-    }
-
-    @media (min-width: 1024px) {
-      .image-column {
-        grid-column: span 6;
+      .catalog-layout {
+        padding: 24px 14px;
       }
-    }
 
-    .image-column img {
-      max-height: 85%;
-      max-width: 85%;
-      object-fit: contain;
-    }
-
-    /* Right Side Details Column */
-    .details-column {
-      grid-column: span 12;
-      display: flex;
-      flex-direction: column;
-      padding-top: 4px;
-    }
-
-    @media (min-width: 1024px) {
-      .details-column {
-        grid-column: span 6;
+      .page-title {
+        font-size: 32px;
+        margin-bottom: 24px;
       }
-    }
 
-    /* Product Title Typography (Identical between Desktop & Mobile) */
-    .product-title {
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      margin-bottom: 4px;
-    }
-
-    .product-price {
-      font-size: 20px;
-      font-weight: 400;
-      color: #6b7280;
-      margin-bottom: 32px;
-    }
-
-    /* Color Selection Elements */
-    .section-label {
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      color: #6b7280;
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .color-container {
-      margin-bottom: 28px;
-    }
-
-    .color-dots-row {
-      display: flex;
-      gap: 14px;
-    }
-
-    .color-dot {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      border: 1px solid transparent;
-      cursor: pointer;
-      outline: none;
-    }
-
-    .color-dot.active {
-      outline: 1px solid #000000;
-      outline-offset: 2px;
-    }
-
-    /* Size Selector Matrix Elements */
-    .size-container {
-      margin-bottom: 40px;
-    }
-
-    .size-header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .size-guide-link {
-      font-size: 12px;
-      color: #6b7280;
-      text-decoration: underline;
-    }
-
-    .size-guide-link:hover {
-      color: #000000;
-    }
-
-    .sizes-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    @media (min-width: 640px) {
-      .sizes-grid {
-        grid-template-columns: repeat(9, minmax(0, 1fr));
+      .category-heading {
+        font-size: 26px;
+        margin-bottom: 16px;
       }
-    }
 
-    .size-box {
-      border: 1px solid #e5e7eb;
-      background: #ffffff;
-      padding: 12px 0;
-      font-size: 13px;
-      font-weight: 600;
-      text-align: center;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: border-color 0.15s ease;
-    }
+      .subcategory-heading {
+        font-size: 18px;
+        margin: 24px 0 12px 0;
+      }
 
-    .size-box:hover {
-      border-color: #000000;
-    }
+      /* 2-Column Mobile Grid for Cards */
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px 12px !important;
+      }
 
-    .size-box.active {
-      border-color: #000000;
-      background-color: #ffffff;
-      font-weight: 700;
-    }
+      .product-card-image {
+        padding: 12px !important;
+        margin-bottom: 8px !important;
+      }
 
-    /* Add To Cart Button Form Action */
-    .add-to-cart-btn {
-      width: 100%;
-      background-color: #2f00ff;
-      color: #FFFFFF;
-      border: none;
-      height: 54px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      cursor: pointer;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      transition: background-color 0.15s ease, transform 0.1s ease;
-    }
+      .product-card-title {
+        font-size: 14px;
+      }
 
-    .add-to-cart-btn:hover {
-      background-color: #1f029e;
-    }
-
-    .add-to-cart-btn:active {
-      transform: scale(0.99);
+      .product-card-price {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- 1. Top Announcement Bar (Auto-hides if empty) -->
+  <!-- 1. Top Announcement Bar -->
   <div id="top-announcement" class="announcement-bar"></div>
 
-  <!-- 2. Precise Structural Header Bar -->
+  <!-- 2. Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-container">
       
-      <!-- Mobile Hamburger Button -->
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Stacked Logo -->
       <a href="index.html" class="logo">
         THE WEATHER
         <span>ENTHUSIAST</span>
       </a>
 
-      <!-- Navigation Links Container -->
       <div class="nav-links" id="navLinks">
         <a href="index.html" class="data-nav-link">Home</a>
-        <a href="./All%20Products/all_products.html" class="data-nav-link">All Products</a>
-        <a href="./Men%27s%20Apparel/mens_apparel.html" class="data-nav-link">Men's Apparel</a>
-        <a href="./Women%27s%20Apparel/womens_apparel.html" class="data-nav-link">Women's Apparel</a>
-        <a href="./Kids%20Apparel/kids_apparel.html" class="data-nav-link">Kids Apparel</a>
-        <a href="./Bottoms%2C%20Drinkware%2C%20Gear%2C%20%26%20Accessories/bottoms_drinkware.html" class="data-nav-link">Drinkware, Gear, & Accessories</a>
-        <a href="./Promotional%20%26%20Milestone%20Items/promotional_milestone.html" class="data-nav-link">Promotional & Milestone Items</a>
+        <a href="All%20Products/all_products.html" class="data-nav-link">All Products</a>
+        <a href="Men%27s%20Apparel/men's_apparel.html" class="data-nav-link">Men's Apparel</a>
+        <a href="Women%27s%20Apparel/women's_apparel.html" class="data-nav-link">Women's Apparel</a>
+        <a href="Kids%20Apparel/kids_apparel.html" class="data-nav-link">Kids Apparel</a>
+        <a href="Bottoms%2C%20Drinkware%2C%20Gear%2C%20%26%20Accessories/drinkware_gear_and_accessories.html" class="data-nav-link">Drinkware, Gear, & Accessories</a>
+        <a href="Promotional%20%26%20Milestone%20Items/promotional_and_milestone_items.html" class="data-nav-link">Promotional & Milestone Items</a>
       </div>
 
-      <!-- Right Utility Actions -->
       <div class="nav-utilities">
         <div class="currency-selector">
           <span>USD</span>
@@ -460,37 +592,36 @@
     </div>
   </nav>
 
-  <!-- 3. Two-Column Split Layout Panel -->
-  <main class="main-layout">
-    <div class="image-column">
-      <img src="" alt="Hailinator Premium T-Shirt" />
+  <!-- 3. Featured Single Product Hero Section (From index.html) -->
+  <section class="hero-layout">
+    <div class="hero-image-column">
+      <img src="" alt="Featured Product" />
     </div>
 
-    <div class="details-column">
-      <h1 class="product-title">Men's Short-Sleeve Weather-Wicking T-Shirt</h1>
+    <div class="hero-details-column">
+      <h1 class="product-title">Men's Hailinator Premium Tee</h1>
       <div class="product-price">$29.95</div>
 
+      <!-- Color Selector -->
       <div class="color-container">
-        <span class="section-label">Select color: <strong id="selected-color-label">Black</strong></span>
+        <span class="section-label">COLOR: BLACK</span>
         <div class="color-dots-row">
-          <button class="color-dot active" style="background-color: #000000;"></button>
-          <button class="color-dot" style="background-color: #1C1D21;"></button>
-          <button class="color-dot" style="background-color: #1D4A7D;"></button>
-          <button class="color-dot" style="background-color: #3B9EB9;"></button>
-          <button class="color-dot" style="background-color: #466974;"></button>
-          <button class="color-dot" style="background-color: #0C5843;"></button>
+          <button class="color-dot active" style="background-color: #000000;" aria-label="Select Black"></button>
+          <button class="color-dot" style="background-color: #333333;" aria-label="Select Dark Gray"></button>
+          <button class="color-dot" style="background-color: #00D8FF;" aria-label="Select Cyan"></button>
         </div>
       </div>
 
+      <!-- Size Matrix Selector -->
       <div class="size-container">
         <div class="size-header-row">
-          <span class="section-label">Select size</span>
+          <span class="section-label" style="margin-bottom:0;">SIZE</span>
           <a href="#" class="size-guide-link">Size guide</a>
         </div>
         <div class="sizes-grid">
           <button class="size-box">XS</button>
-          <button class="size-box">S</button>
-          <button class="size-box active">M</button>
+          <button class="size-box active">S</button>
+          <button class="size-box">M</button>
           <button class="size-box">L</button>
           <button class="size-box">XL</button>
           <button class="size-box">2XL</button>
@@ -500,8 +631,209 @@
         </div>
       </div>
 
+      <!-- Add to Cart CTA -->
       <button class="add-to-cart-btn">ADD TO CART</button>
     </div>
+  </section>
+
+  <!-- 4. Combined All Products Directory Section (Placed Directly Below) -->
+  <main class="catalog-layout">
+    <h1 class="page-title">All Products</h1>
+
+    <!-- SECTION 1: MEN'S APPAREL -->
+    <section class="category-section">
+      <h2 class="category-heading">Men's Apparel</h2>
+      <div class="product-grid">
+        <a href="Men%27s%20Apparel/Standard%20T-Shirts/standard_t_shirt.html" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Standard T-Shirts" /></div>
+          <div class="product-card-title">Men's Standard T-Shirts</div>
+          <div class="product-card-price">$29.95</div>
+        </a>
+        <a href="index.html" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Hailinator Premium Tee #2" /></div>
+          <div class="product-card-title">Men's Hailinator Premium Tee #2</div>
+          <div class="product-card-price">$29.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Velocity Pullover Hoodie #3" /></div>
+          <div class="product-card-title">Men's Velocity Pullover Hoodie #3</div>
+          <div class="product-card-price">$49.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Radar Performance Shirt #4" /></div>
+          <div class="product-card-title">Men's Radar Performance Shirt #4</div>
+          <div class="product-card-price">$34.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Supercell Graphic Tee #5" /></div>
+          <div class="product-card-title">Men's Supercell Graphic Tee #5</div>
+          <div class="product-card-price">$29.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Storm Chaser Windbreaker #6" /></div>
+          <div class="product-card-title">Men's Storm Chaser Windbreaker #6</div>
+          <div class="product-card-price">$59.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Lightning Strike Zip Hoodie #7" /></div>
+          <div class="product-card-title">Men's Lightning Strike Zip Hoodie #7</div>
+          <div class="product-card-price">$54.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Tornado Core Long Sleeve #8" /></div>
+          <div class="product-card-title">Men's Tornado Core Long Sleeve #8</div>
+          <div class="product-card-price">$38.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Barometric Fleece Pullover #9" /></div>
+          <div class="product-card-title">Men's Barometric Fleece Pullover #9</div>
+          <div class="product-card-price">$48.95</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-card-image"><img src="" alt="Men's Microburst Athletic Tee #10" /></div>
+          <div class="product-card-title">Men's Microburst Athletic Tee #10</div>
+          <div class="product-card-price">$32.95</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WOMEN'S APPAREL -->
+    <section class="category-section">
+      <h2 class="category-heading">Women's Apparel</h2>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Hailinator Fitted Tee #1" /></div><div class="product-card-title">Women's Hailinator Fitted Tee #1</div><div class="product-card-price">$29.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Supercell Cropped Hoodie #2" /></div><div class="product-card-title">Women's Supercell Cropped Hoodie #2</div><div class="product-card-price">$46.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Radar V-Neck Shirt #3" /></div><div class="product-card-title">Women's Radar V-Neck Shirt #3</div><div class="product-card-price">$28.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Velocity Tank Top #4" /></div><div class="product-card-title">Women's Velocity Tank Top #4</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Storm Front Pullover #5" /></div><div class="product-card-title">Women's Storm Front Pullover #5</div><div class="product-card-price">$49.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Microburst Performance Tee #6" /></div><div class="product-card-title">Women's Microburst Performance Tee #6</div><div class="product-card-price">$32.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Tornado Alley Sweatshirt #7" /></div><div class="product-card-title">Women's Tornado Alley Sweatshirt #7</div><div class="product-card-price">$44.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Lightning Long Sleeve #8" /></div><div class="product-card-title">Women's Lightning Long Sleeve #8</div><div class="product-card-price">$36.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Women's Isobar Fleece Jacket #9" /></div><div class="product-card-title">Women's Isobar Fleece Jacket #9</div><div class="product-card-price">$58.95</div></a>
+      </div>
+    </section>
+
+    <!-- SECTION 3: KIDS APPAREL -->
+    <section class="category-section">
+      <h2 class="category-heading">Kids Apparel</h2>
+
+      <!-- Sub-Grid 1: Baby Boys -->
+      <h3 class="subcategory-heading">KIDS BABY BOYS</h3>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Cloud Romper #1" /></div><div class="product-card-title">Baby Boy Cloud Romper #1</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Lightning Onesie #2" /></div><div class="product-card-title">Baby Boy Lightning Onesie #2</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Little Radar Body #3" /></div><div class="product-card-title">Baby Boy Little Radar Body #3</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Storm Chaser Suit #4" /></div><div class="product-card-title">Baby Boy Storm Chaser Suit #4</div><div class="product-card-price">$21.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Mini Tornado Tee #5" /></div><div class="product-card-title">Baby Boy Mini Tornado Tee #5</div><div class="product-card-price">$18.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Thunder Sleeper #6" /></div><div class="product-card-title">Baby Boy Thunder Sleeper #6</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Raindrop Onesie #7" /></div><div class="product-card-title">Baby Boy Raindrop Onesie #7</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Sunny Day Bodysuit #8" /></div><div class="product-card-title">Baby Boy Sunny Day Bodysuit #8</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Microburst Creeper #9" /></div><div class="product-card-title">Baby Boy Microburst Creeper #9</div><div class="product-card-price">$20.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Isobar Newborn Set #10" /></div><div class="product-card-title">Baby Boy Isobar Newborn Set #10</div><div class="product-card-price">$24.95</div></a>
+      </div>
+
+      <!-- Sub-Grid 2: Baby Girls -->
+      <h3 class="subcategory-heading">KIDS BABY GIRLS</h3>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Rainbow Onesie #1" /></div><div class="product-card-title">Baby Girl Rainbow Onesie #1</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Little Cloud Romper #2" /></div><div class="product-card-title">Baby Girl Little Cloud Romper #2</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Sunshine Bodysuit #3" /></div><div class="product-card-title">Baby Girl Sunshine Bodysuit #3</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Storm Sparkle Suit #4" /></div><div class="product-card-title">Baby Girl Storm Sparkle Suit #4</div><div class="product-card-price">$21.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Lightning Creeper #5" /></div><div class="product-card-title">Baby Girl Lightning Creeper #5</div><div class="product-card-price">$18.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Mini Hailinator Tee #6" /></div><div class="product-card-title">Baby Girl Mini Hailinator Tee #6</div><div class="product-card-price">$18.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Sky Sleeper #7" /></div><div class="product-card-title">Baby Girl Sky Sleeper #7</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Breeze Romper #8" /></div><div class="product-card-title">Baby Girl Breeze Romper #8</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Cumulus Newborn Set #9" /></div><div class="product-card-title">Baby Girl Cumulus Newborn Set #9</div><div class="product-card-price">$24.95</div></a>
+      </div>
+
+      <!-- Sub-Grid 3: Toddler Boys -->
+      <h3 class="subcategory-heading">KIDS TODDLER BOYS</h3>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Tornado Graphic Tee #1" /></div><div class="product-card-title">Toddler Boy Tornado Graphic Tee #1</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Lightning Bolt Shirt #2" /></div><div class="product-card-title">Toddler Boy Lightning Bolt Shirt #2</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Radar Crewneck #3" /></div><div class="product-card-title">Toddler Boy Radar Crewneck #3</div><div class="product-card-price">$32.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Chaser Hoodie #4" /></div><div class="product-card-title">Toddler Boy Chaser Hoodie #4</div><div class="product-card-price">$36.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Supercell Tee #5" /></div><div class="product-card-title">Toddler Boy Supercell Tee #5</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Hailinator Tee #6" /></div><div class="product-card-title">Toddler Boy Hailinator Tee #6</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Windbreaker Jacket #7" /></div><div class="product-card-title">Toddler Boy Windbreaker Jacket #7</div><div class="product-card-price">$39.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Microburst Long Sleeve #8" /></div><div class="product-card-title">Toddler Boy Microburst Long Sleeve #8</div><div class="product-card-price">$26.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Rain Scout Shirt #9" /></div><div class="product-card-title">Toddler Boy Rain Scout Shirt #9</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Isobar Track Jacket #10" /></div><div class="product-card-title">Toddler Boy Isobar Track Jacket #10</div><div class="product-card-price">$38.95</div></a>
+      </div>
+
+      <!-- Sub-Grid 4: Toddler Girls -->
+      <h3 class="subcategory-heading">KIDS TODDLER GIRLS</h3>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Sunshine Graphic Tee #1" /></div><div class="product-card-title">Toddler Girl Sunshine Graphic Tee #1</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Rainbow Cloud Tee #2" /></div><div class="product-card-title">Toddler Girl Rainbow Cloud Tee #2</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Storm Sparkle Hoodie #3" /></div><div class="product-card-title">Toddler Girl Storm Sparkle Hoodie #3</div><div class="product-card-price">$36.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Lightning Long Sleeve #4" /></div><div class="product-card-title">Toddler Girl Lightning Long Sleeve #4</div><div class="product-card-price">$26.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Breeze Active Shirt #5" /></div><div class="product-card-title">Toddler Girl Breeze Active Shirt #5</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Tornado Alley Crewneck #6" /></div><div class="product-card-title">Toddler Girl Tornado Alley Crewneck #6</div><div class="product-card-price">$32.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Radar Explorer Tee #7" /></div><div class="product-card-title">Toddler Girl Radar Explorer Tee #7</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Hailinator Premium Tee #8" /></div><div class="product-card-title">Toddler Girl Hailinator Premium Tee #8</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Microburst Jacket #9" /></div><div class="product-card-title">Toddler Girl Microburst Jacket #9</div><div class="product-card-price">$38.95</div></a>
+      </div>
+
+      <!-- Sub-Grid 5: Youth Boys -->
+      <h3 class="subcategory-heading">KIDS YOUTH BOYS</h3>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Storm Chaser Tee #1" /></div><div class="product-card-title">Youth Boy Storm Chaser Tee #1</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Velocity Pullover #2" /></div><div class="product-card-title">Youth Boy Velocity Pullover #2</div><div class="product-card-price">$39.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Hailinator Graphic Shirt #3" /></div><div class="product-card-title">Youth Boy Hailinator Graphic Shirt #3</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Radar Performance Tee #4" /></div><div class="product-card-title">Youth Boy Radar Performance Tee #4</div><div class="product-card-price">$26.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Supercell Zip Hoodie #5" /></div><div class="product-card-title">Youth Boy Supercell Zip Hoodie #5</div><div class="product-card-price">$42.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Lightning Strike Long Sleeve #6" /></div><div class="product-card-title">Youth Boy Lightning Strike Long Sleeve #6</div><div class="product-card-price">$28.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Tornado Core Tech Shirt #7" /></div><div class="product-card-title">Youth Boy Tornado Core Tech Shirt #7</div><div class="product-card-price">$26.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Barometric Windbreaker #8" /></div><div class="product-card-title">Youth Boy Barometric Windbreaker #8</div><div class="product-card-price">$44.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Microburst Athletic Tee #9" /></div><div class="product-card-title">Youth Boy Microburst Athletic Tee #9</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Isobar Fleece Sweatshirt #10" /></div><div class="product-card-title">Youth Boy Isobar Fleece Sweatshirt #10</div><div class="product-card-price">$38.95</div></a>
+      </div>
+
+      <!-- Sub-Grid 6: Youth Girls -->
+      <h3 class="subcategory-heading">KIDS YOUTH GIRLS</h3>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Hailinator Graphic Tee #1" /></div><div class="product-card-title">Youth Girl Hailinator Graphic Tee #1</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Supercell Crop Hoodie #2" /></div><div class="product-card-title">Youth Girl Supercell Crop Hoodie #2</div><div class="product-card-price">$39.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Radar Active Shirt #3" /></div><div class="product-card-title">Youth Girl Radar Active Shirt #3</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Storm Front Long Sleeve #4" /></div><div class="product-card-title">Youth Girl Storm Front Long Sleeve #4</div><div class="product-card-price">$28.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Lightning Sparkle Tee #5" /></div><div class="product-card-title">Youth Girl Lightning Sparkle Tee #5</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Velocity Pullover #6" /></div><div class="product-card-title">Youth Girl Velocity Pullover #6</div><div class="product-card-price">$39.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Tornado Alley Sweatshirt #7" /></div><div class="product-card-title">Youth Girl Tornado Alley Sweatshirt #7</div><div class="product-card-price">$36.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Microburst Performance Tee #8" /></div><div class="product-card-title">Youth Girl Microburst Performance Tee #8</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Isobar Windbreaker #9" /></div><div class="product-card-title">Youth Girl Isobar Windbreaker #9</div><div class="product-card-price">$44.95</div></a>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DRINKWARE, GEAR, & ACCESSORIES -->
+    <section class="category-section">
+      <h2 class="category-heading">Drinkware, Gear, & Accessories</h2>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Weather Enthusiast Insulated Tumbler #1" /></div><div class="product-card-title">Weather Enthusiast Insulated Tumbler #1</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Storm Chaser All-Weather Joggers #2" /></div><div class="product-card-title">Storm Chaser All-Weather Joggers #2</div><div class="product-card-price">$44.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Radar Embroidered Snapback Cap #3" /></div><div class="product-card-title">Radar Embroidered Snapback Cap #3</div><div class="product-card-price">$22.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Supercell Stainless Steel Mug #4" /></div><div class="product-card-title">Supercell Stainless Steel Mug #4</div><div class="product-card-price">$18.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Hailinator Heavy-Duty Backpack #5" /></div><div class="product-card-title">Hailinator Heavy-Duty Backpack #5</div><div class="product-card-price">$59.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Lightning Strike Athletic Shorts #6" /></div><div class="product-card-title">Lightning Strike Athletic Shorts #6</div><div class="product-card-price">$32.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Barometric Water Bottle 32oz #7" /></div><div class="product-card-title">Barometric Water Bottle 32oz #7</div><div class="product-card-price">$26.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Tornado Core Knit Beanie #8" /></div><div class="product-card-title">Tornado Core Knit Beanie #8</div><div class="product-card-price">$19.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Isobar Field Weather Journal #9" /></div><div class="product-card-title">Isobar Field Weather Journal #9</div><div class="product-card-price">$14.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Velocity Fleece Sweatpants #10" /></div><div class="product-card-title">Velocity Fleece Sweatpants #10</div><div class="product-card-price">$42.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Storm Front Umbrella & Sleeve #11" /></div><div class="product-card-title">Storm Front Umbrella & Sleeve #11</div><div class="product-card-price">$29.95</div></a>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PROMOTIONAL & MILESTONE ITEMS -->
+    <section class="category-section">
+      <h2 class="category-heading">Promotional & Milestone Items</h2>
+      <div class="product-grid">
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="100k Subscriber Milestone Collector Coin #1" /></div><div class="product-card-title">100k Subscriber Milestone Collector Coin #1</div><div class="product-card-price">$34.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Official Weather Enthusiast Founding Badge #2" /></div><div class="product-card-title">Official Weather Enthusiast Founding Badge #2</div><div class="product-card-price">$14.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Limited Edition Storm Chaser Flag Banner #3" /></div><div class="product-card-title">Limited Edition Storm Chaser Flag Banner #3</div><div class="product-card-price">$24.95</div></a>
+        <a href="#" class="product-card"><div class="product-card-image"><img src="" alt="Anniversary Gold-Embossed Commemorative Poster #4" /></div><div class="product-card-title">Anniversary Gold-Embossed Commemorative Poster #4</div><div class="product-card-price">$29.95</div></a>
+      </div>
+    </section>
+
   </main>
 
   <!-- JavaScript Logic -->
@@ -513,7 +845,7 @@
         bar.classList.add("hidden");
       }
 
-      // 2. Highlight current page link cleanly without forced bold weight
+      // 2. Highlight current page link
       const currentFilename = decodeURIComponent(window.location.pathname.split("/").pop()) || "index.html";
       const navLinks = document.querySelectorAll(".data-nav-link");
 
@@ -523,7 +855,7 @@
 
         if (currentFilename === targetFilename) {
           link.style.color = "#000000";
-          link.style.fontWeight = "400";
+          link.style.fontWeight = "600";
           link.style.cursor = "default";
           
           link.addEventListener("click", function(event) {
