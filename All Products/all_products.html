@@ -178,7 +178,7 @@
       margin-bottom: 60px;
     }
 
-    /* Category Headings Base Rule */
+    /* Main Category Headings Base Rule */
     .category-heading {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 32px;
@@ -194,14 +194,25 @@
       letter-spacing: 0.01em;
     }
 
-    /* Super-sub-title: Subcategory Headings (e.g., "KIDS BABY BOYS") */
+    /* Sub-section Heading Style */
+    .sub-section-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: #000000;
+    }
+
+    /* Super-sub-title: Subcategory Headings */
     .subcategory-heading {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 22px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      margin: 32px 0 16px 0;
+      margin: 12px 0 16px 0;
       color: #000000;
     }
 
@@ -338,9 +349,13 @@
         margin-bottom: 16px;
       }
 
+      .sub-section-title {
+        font-size: 20px;
+      }
+
       .subcategory-heading {
         font-size: 18px;
-        margin: 24px 0 12px 0;
+        margin: 12px 0 12px 0;
       }
 
       /* 2-Column Mobile Grid for Cards */
@@ -413,9 +428,11 @@
   <main class="main-layout">
     <h1 class="page-title">All Products</h1>
 
-    <!-- SECTION 1: MEN'S APPAREL (No sub-sections -> renders ALL CAPS) -->
+    <!-- SECTION 1: MEN'S APPAREL -->
     <section class="category-section">
       <h2 class="category-heading">Men's Apparel</h2>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+
       <div class="product-grid">
         <a href="../Men%27s%20Apparel/Standard%20T-Shirts/standard_t_shirt.html" class="product-card">
           <div class="product-card-image"><img src="" alt="Men's Standard T-Shirts" /></div>
@@ -470,9 +487,11 @@
       </div>
     </section>
 
-    <!-- SECTION 2: WOMEN'S APPAREL (No sub-sections -> renders ALL CAPS) -->
+    <!-- SECTION 2: WOMEN'S APPAREL -->
     <section class="category-section">
       <h2 class="category-heading">Women's Apparel</h2>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=11" class="product-card">
           <div class="product-card-image"><img src="" alt="Women's Hailinator Fitted Tee #1" /></div>
@@ -522,12 +541,13 @@
       </div>
     </section>
 
-    <!-- SECTION 3: KIDS APPAREL (Has sub-sections -> keeps Title Case) -->
+    <!-- SECTION 3: KIDS APPAREL -->
     <section class="category-section">
       <h2 class="category-heading">Kids Apparel</h2>
 
-      <!-- Sub-Grid 1: Baby Boys -->
-      <h3 class="subcategory-heading">KIDS BABY BOYS</h3>
+      <!-- Kids Baby Boys -->
+      <h3 class="sub-section-title">KID'S BABY BOYS</h3>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=20" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Cloud Romper #1" /></div><div class="product-card-title">Baby Boy Cloud Romper #1</div><div class="product-card-price">$19.95</div></a>
         <a href="../Home/product_detail.html?item=21" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Lightning Onesie #2" /></div><div class="product-card-title">Baby Boy Lightning Onesie #2</div><div class="product-card-price">$19.95</div></a>
@@ -541,8 +561,9 @@
         <a href="../Home/product_detail.html?item=29" class="product-card"><div class="product-card-image"><img src="" alt="Baby Boy Isobar Newborn Set #10" /></div><div class="product-card-title">Baby Boy Isobar Newborn Set #10</div><div class="product-card-price">$24.95</div></a>
       </div>
 
-      <!-- Sub-Grid 2: Baby Girls -->
-      <h3 class="subcategory-heading">KIDS BABY GIRLS</h3>
+      <!-- Kids Baby Girls -->
+      <h3 class="sub-section-title">KID'S BABY GIRLS</h3>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=30" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Rainbow Onesie #1" /></div><div class="product-card-title">Baby Girl Rainbow Onesie #1</div><div class="product-card-price">$19.95</div></a>
         <a href="../Home/product_detail.html?item=31" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Little Cloud Romper #2" /></div><div class="product-card-title">Baby Girl Little Cloud Romper #2</div><div class="product-card-price">$19.95</div></a>
@@ -555,8 +576,9 @@
         <a href="../Home/product_detail.html?item=38" class="product-card"><div class="product-card-image"><img src="" alt="Baby Girl Cumulus Newborn Set #9" /></div><div class="product-card-title">Baby Girl Cumulus Newborn Set #9</div><div class="product-card-price">$24.95</div></a>
       </div>
 
-      <!-- Sub-Grid 3: Toddler Boys -->
-      <h3 class="subcategory-heading">KIDS TODDLER BOYS</h3>
+      <!-- Kids Toddler Boys -->
+      <h3 class="sub-section-title">KID'S TODDLER BOYS</h3>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=39" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Tornado Graphic Tee #1" /></div><div class="product-card-title">Toddler Boy Tornado Graphic Tee #1</div><div class="product-card-price">$22.95</div></a>
         <a href="../Home/product_detail.html?item=40" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Lightning Bolt Shirt #2" /></div><div class="product-card-title">Toddler Boy Lightning Bolt Shirt #2</div><div class="product-card-price">$22.95</div></a>
@@ -570,8 +592,9 @@
         <a href="../Home/product_detail.html?item=48" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Boy Isobar Track Jacket #10" /></div><div class="product-card-title">Toddler Boy Isobar Track Jacket #10</div><div class="product-card-price">$38.95</div></a>
       </div>
 
-      <!-- Sub-Grid 4: Toddler Girls -->
-      <h3 class="subcategory-heading">KIDS TODDLER GIRLS</h3>
+      <!-- Kids Toddler Girls -->
+      <h3 class="sub-section-title">KID'S TODDLER GIRLS</h3>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=49" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Sunshine Graphic Tee #1" /></div><div class="product-card-title">Toddler Girl Sunshine Graphic Tee #1</div><div class="product-card-price">$22.95</div></a>
         <a href="../Home/product_detail.html?item=50" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Rainbow Cloud Tee #2" /></div><div class="product-card-title">Toddler Girl Rainbow Cloud Tee #2</div><div class="product-card-price">$22.95</div></a>
@@ -584,8 +607,9 @@
         <a href="../Home/product_detail.html?item=57" class="product-card"><div class="product-card-image"><img src="" alt="Toddler Girl Microburst Jacket #9" /></div><div class="product-card-title">Toddler Girl Microburst Jacket #9</div><div class="product-card-price">$38.95</div></a>
       </div>
 
-      <!-- Sub-Grid 5: Youth Boys -->
-      <h3 class="subcategory-heading">KIDS YOUTH BOYS</h3>
+      <!-- Kids Youth Boys -->
+      <h3 class="sub-section-title">KID'S YOUTH BOYS</h3>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=58" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Storm Chaser Tee #1" /></div><div class="product-card-title">Youth Boy Storm Chaser Tee #1</div><div class="product-card-price">$24.95</div></a>
         <a href="../Home/product_detail.html?item=59" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Velocity Pullover #2" /></div><div class="product-card-title">Youth Boy Velocity Pullover #2</div><div class="product-card-price">$39.95</div></a>
@@ -599,8 +623,9 @@
         <a href="../Home/product_detail.html?item=67" class="product-card"><div class="product-card-image"><img src="" alt="Youth Boy Isobar Fleece Sweatshirt #10" /></div><div class="product-card-title">Youth Boy Isobar Fleece Sweatshirt #10</div><div class="product-card-price">$38.95</div></a>
       </div>
 
-      <!-- Sub-Grid 6: Youth Girls -->
-      <h3 class="subcategory-heading">KIDS YOUTH GIRLS</h3>
+      <!-- Kids Youth Girls -->
+      <h3 class="sub-section-title">KID'S YOUTH GIRLS</h3>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=68" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Hailinator Graphic Tee #1" /></div><div class="product-card-title">Youth Girl Hailinator Graphic Tee #1</div><div class="product-card-price">$24.95</div></a>
         <a href="../Home/product_detail.html?item=69" class="product-card"><div class="product-card-image"><img src="" alt="Youth Girl Supercell Crop Hoodie #2" /></div><div class="product-card-title">Youth Girl Supercell Crop Hoodie #2</div><div class="product-card-price">$39.95</div></a>
@@ -614,9 +639,11 @@
       </div>
     </section>
 
-    <!-- SECTION 4: DRINKWARE, GEAR, & ACCESSORIES (No sub-sections -> renders ALL CAPS) -->
+    <!-- SECTION 4: DRINKWARE, GEAR, & ACCESSORIES -->
     <section class="category-section">
       <h2 class="category-heading">Drinkware, Gear, & Accessories</h2>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=77" class="product-card"><div class="product-card-image"><img src="" alt="Weather Enthusiast Insulated Tumbler #1" /></div><div class="product-card-title">Weather Enthusiast Insulated Tumbler #1</div><div class="product-card-price">$24.95</div></a>
         <a href="../Home/product_detail.html?item=78" class="product-card"><div class="product-card-image"><img src="" alt="Storm Chaser All-Weather Joggers #2" /></div><div class="product-card-title">Storm Chaser All-Weather Joggers #2</div><div class="product-card-price">$44.95</div></a>
@@ -632,9 +659,11 @@
       </div>
     </section>
 
-    <!-- SECTION 5: PROMOTIONAL & MILESTONE ITEMS (No sub-sections -> renders ALL CAPS) -->
+    <!-- SECTION 5: PROMOTIONAL & MILESTONE ITEMS -->
     <section class="category-section">
       <h2 class="category-heading">Promotional & Milestone Items</h2>
+      <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+
       <div class="product-grid">
         <a href="../Home/product_detail.html?item=88" class="product-card"><div class="product-card-image"><img src="" alt="100k Subscriber Milestone Collector Coin #1" /></div><div class="product-card-title">100k Subscriber Milestone Collector Coin #1</div><div class="product-card-price">$34.95</div></a>
         <a href="../Home/product_detail.html?item=89" class="product-card"><div class="product-card-image"><img src="" alt="Official Weather Enthusiast Founding Badge #2" /></div><div class="product-card-title">Official Weather Enthusiast Founding Badge #2</div><div class="product-card-price">$14.95</div></a>
