@@ -156,7 +156,7 @@
       opacity: 0.7;
     }
 
-    /* 3. Catalog Container & Desktop Grid Layout */
+    /* 3. Catalog Container & Grid */
     .catalog-container {
       max-width: 1400px;
       margin: 0 auto;
@@ -168,12 +168,37 @@
       font-size: 32px;
       font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       color: #000000;
     }
 
-    .products-grid,
-    .product-grid {
+    .category-group {
+      margin-bottom: 56px;
+    }
+
+    /* Sub-section Heading Style */
+    .sub-section-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      color: #000000;
+    }
+
+    /* Super-sub-title: Subcategory Headings */
+    .subcategory-heading {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin: 12px 0 16px 0;
+      color: #000000;
+    }
+
+    .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px 24px;
@@ -192,8 +217,7 @@
       transform: translateY(-2px);
     }
 
-    .card-image-box,
-    .product-card-image {
+    .card-image-box {
       background-color: #EBEBEB;
       aspect-ratio: 1 / 1;
       display: flex;
@@ -204,31 +228,26 @@
       width: 100%;
     }
 
-    .card-image-box img,
-    .product-card-image img {
+    .card-image-box img {
       max-height: 85%;
       max-width: 85%;
       object-fit: contain;
     }
 
-    .card-name,
-    .product-card-title {
+    .card-name {
       font-size: 15px;
       font-weight: 600;
       margin-bottom: 4px;
-      color: #000000;
     }
 
-    .card-price,
-    .product-card-price {
+    .card-price {
       font-size: 14px;
       color: #6b7280;
       font-weight: 400;
     }
 
-    /* 4. Complete Mobile Viewport Rules (max-width: 768px) */
+    /* Mobile Viewport Rules */
     @media (max-width: 768px) {
-      /* Mobile Navbar Layout */
       .navbar-container {
         display: grid;
         grid-template-columns: 28px 1fr auto;
@@ -255,7 +274,6 @@
         gap: 12px;
       }
 
-      /* Mobile Navigation Drawer */
       .nav-links {
         display: none;
         position: absolute;
@@ -283,7 +301,6 @@
         font-size: 14px;
       }
 
-      /* Hamburger Morph Animation */
       .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(8.5px) rotate(45deg);
       }
@@ -296,49 +313,40 @@
         transform: translateY(-8.5px) rotate(-45deg);
       }
 
-      /* Page Padding & Spacing */
-      .catalog-container,
-      .catalog-layout,
-      .main-layout {
+      .catalog-container {
         padding: 20px 14px;
       }
 
-      .catalog-title,
-      .page-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-
-      .category-heading {
+      .catalog-title {
         font-size: 26px;
         margin-bottom: 16px;
       }
 
-      .subcategory-heading {
-        font-size: 18px;
-        margin: 24px 0 12px 0;
+      .sub-section-title {
+        font-size: 20px;
       }
 
-      /* 2-Column Mobile Product Grid Method */
-      .products-grid,
-      .product-grid {
+      .subcategory-heading {
+        font-size: 18px;
+        margin: 12px 0 12px 0;
+      }
+
+      /* 2-Column Mobile Grid for Cards */
+      .products-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 20px 12px !important;
       }
 
-      .card-image-box,
-      .product-card-image {
+      .card-image-box {
         padding: 12px !important;
         margin-bottom: 8px !important;
       }
 
-      .card-name,
-      .product-card-title {
+      .card-name {
         font-size: 14px;
       }
 
-      .card-price,
-      .product-card-price {
+      .card-price {
         font-size: 13px;
       }
     }
@@ -392,7 +400,18 @@
   <!-- Product Catalog Grid -->
   <main class="catalog-container">
     <h1 class="catalog-title">WOMEN'S APPAREL</h1>
-    <div id="womens-products-grid" class="products-grid"></div>
+
+    <!-- 1. The Weather Enthusiast Logo Design Subcategory -->
+    <div class="category-group">
+      <h3 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h3>
+      <div id="weather-enthusiast-products-grid" class="products-grid"></div>
+    </div>
+
+    <!-- 2. StormStream Logo Design Subcategory -->
+    <div class="category-group">
+      <h3 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h3>
+      <div id="stormstream-products-grid" class="products-grid"></div>
+    </div>
   </main>
 
   <script>
@@ -428,8 +447,8 @@
         });
       }
 
-      // 4. Generate 9 Distinct Women's Apparel Items
-      const womensItems = [
+      // 4. Data for The Weather Enthusiast Logo Design Items (Women's)
+      const weatherEnthusiastItems = [
         { id: 1, name: "Women's Hailinator Fitted Tee #1", price: "$29.95", img: "", link: "../Home/product_detail.html?item=11" },
         { id: 2, name: "Women's Supercell Cropped Hoodie #2", price: "$46.95", img: "", link: "../Home/product_detail.html?item=12" },
         { id: 3, name: "Women's Radar V-Neck Shirt #3", price: "$28.95", img: "", link: "../Home/product_detail.html?item=13" },
@@ -441,16 +460,36 @@
         { id: 9, name: "Women's Isobar Fleece Jacket #9", price: "$58.95", img: "", link: "../Home/product_detail.html?item=19" }
       ];
 
-      const gridContainer = document.getElementById("womens-products-grid");
-      if (gridContainer) {
-        gridContainer.innerHTML = womensItems.map(item => `
-          <a href="${item.link}" class="product-card">
-            <div class="card-image-box"><img src="${item.img}" alt="${item.name}" /></div>
-            <div class="card-name">${item.name}</div>
-            <div class="card-price">${item.price}</div>
-          </a>
-        `).join('');
+      // 5. Separate Data for StormStream Logo Design Items (Women's)
+      const stormStreamItems = [
+        { id: 201, name: "Women's StormStream Fitted Tee #1", price: "$29.95", img: "", link: "../Home/product_detail.html?item=201" },
+        { id: 202, name: "Women's StormStream Cropped Hoodie #2", price: "$46.95", img: "", link: "../Home/product_detail.html?item=202" },
+        { id: 203, name: "Women's StormStream V-Neck Shirt #3", price: "$28.95", img: "", link: "../Home/product_detail.html?item=203" },
+        { id: 204, name: "Women's StormStream Active Tank #4", price: "$24.95", img: "", link: "../Home/product_detail.html?item=204" },
+        { id: 205, name: "Women's StormStream Pullover #5", price: "$49.95", img: "", link: "../Home/product_detail.html?item=205" },
+        { id: 206, name: "Women's StormStream Performance Tee #6", price: "$32.95", img: "", link: "../Home/product_detail.html?item=206" },
+        { id: 207, name: "Women's StormStream Crewneck Sweatshirt #7", price: "$44.95", img: "", link: "../Home/product_detail.html?item=207" },
+        { id: 208, name: "Women's StormStream Long Sleeve #8", price: "$36.95", img: "", link: "../Home/product_detail.html?item=208" },
+        { id: 209, name: "Women's StormStream Fleece Jacket #9", price: "$58.95", img: "", link: "../Home/product_detail.html?item=209" }
+      ];
+
+      // Helper function to render grid
+      function renderGrid(itemsArray, containerId) {
+        const container = document.getElementById(containerId);
+        if (container) {
+          container.innerHTML = itemsArray.map(item => `
+            <a href="${item.link}" class="product-card">
+              <div class="card-image-box"><img src="${item.img}" alt="${item.name}" /></div>
+              <div class="card-name">${item.name}</div>
+              <div class="card-price">${item.price}</div>
+            </a>
+          `).join('');
+        }
       }
+
+      // Populate each grid separately with its respective items
+      renderGrid(weatherEnthusiastItems, "weather-enthusiast-products-grid");
+      renderGrid(stormStreamItems, "stormstream-products-grid");
     });
   </script>
 </body>
