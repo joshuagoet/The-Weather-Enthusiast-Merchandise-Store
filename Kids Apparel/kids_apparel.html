@@ -172,21 +172,43 @@
       color: #000000;
     }
 
-    .category-block {
-      margin-bottom: 48px;
+    .age-category-wrapper {
+      margin-bottom: 56px;
     }
 
-    /* Super-Sub-Section Heading (ALL CAPS, Bold, No Underline) */
-    .category-title-text {
+    .age-category-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+      color: #000000;
+    }
+
+    .design-subgroup {
+      margin-bottom: 40px;
+    }
+
+    /* Sub-section Heading Style */
+    .sub-section-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 22px;
       font-weight: 800;
-      letter-spacing: 0.02em;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-top: 12px;
+      margin-bottom: 6px;
       color: #000000;
-      border-bottom: none;
-      padding-bottom: 0;
+    }
+
+    /* Super-sub-title: Subcategory Headings */
+    .subcategory-heading {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin: 6px 0 16px 0;
+      color: #000000;
     }
 
     .products-grid {
@@ -226,21 +248,18 @@
     }
 
     .card-name {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 15px;
       font-weight: 600;
       margin-bottom: 4px;
-      color: #000000;
     }
 
     .card-price {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 14px;
       color: #6b7280;
       font-weight: 400;
     }
 
-    /* 4. Complete Mobile Viewport Rules (max-width: 768px) */
+    /* Mobile Viewport Rules (max-width: 768px) */
     @media (max-width: 768px) {
       .navbar-container {
         display: grid;
@@ -268,7 +287,6 @@
         gap: 12px;
       }
 
-      /* Mobile Navigation Drawer */
       .nav-links {
         display: none;
         position: absolute;
@@ -296,7 +314,6 @@
         font-size: 14px;
       }
 
-      /* Hamburger Morph Animation */
       .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(8.5px) rotate(45deg);
       }
@@ -309,19 +326,27 @@
         transform: translateY(-8.5px) rotate(-45deg);
       }
 
-      /* Mobile Layout Spacing */
       .catalog-container {
         padding: 20px 14px;
       }
 
       .catalog-title {
-        font-size: 28px;
+        font-size: 26px;
         margin-bottom: 20px;
       }
 
-      .category-title-text {
+      .age-category-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+
+      .sub-section-title {
         font-size: 18px;
-        margin-bottom: 12px;
+      }
+
+      .subcategory-heading {
+        font-size: 16px;
+        margin: 6px 0 12px 0;
       }
 
       /* 2-Column Mobile Product Grid Method */
@@ -395,39 +420,105 @@
     <h1 class="catalog-title">Kids Apparel</h1>
     
     <!-- Category 1: Baby Boys -->
-    <div class="category-block">
-      <h2 class="category-title-text">Kids Baby Boys</h2>
-      <div id="grid-baby-boys" class="products-grid"></div>
+    <div class="age-category-wrapper">
+      <h2 class="age-category-title">Kids Baby Boys</h2>
+      
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">The Weather Enthusiast Logo Design</h3>
+        <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+        <div id="grid-baby-boys-we" class="products-grid"></div>
+      </div>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">StormStream Logo Design</h3>
+        <h4 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h4>
+        <div id="grid-baby-boys-ss" class="products-grid"></div>
+      </div>
     </div>
 
     <!-- Category 2: Baby Girls -->
-    <div class="category-block">
-      <h2 class="category-title-text">Kids Baby Girls</h2>
-      <div id="grid-baby-girls" class="products-grid"></div>
+    <div class="age-category-wrapper">
+      <h2 class="age-category-title">Kids Baby Girls</h2>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">The Weather Enthusiast Logo Design</h3>
+        <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+        <div id="grid-baby-girls-we" class="products-grid"></div>
+      </div>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">StormStream Logo Design</h3>
+        <h4 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h4>
+        <div id="grid-baby-girls-ss" class="products-grid"></div>
+      </div>
     </div>
 
     <!-- Category 3: Toddler Boys -->
-    <div class="category-block">
-      <h2 class="category-title-text">Kids Toddler Boys</h2>
-      <div id="grid-toddler-boys" class="products-grid"></div>
+    <div class="age-category-wrapper">
+      <h2 class="age-category-title">Kids Toddler Boys</h2>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">The Weather Enthusiast Logo Design</h3>
+        <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+        <div id="grid-toddler-boys-we" class="products-grid"></div>
+      </div>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">StormStream Logo Design</h3>
+        <h4 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h4>
+        <div id="grid-toddler-boys-ss" class="products-grid"></div>
+      </div>
     </div>
 
     <!-- Category 4: Toddler Girls -->
-    <div class="category-block">
-      <h2 class="category-title-text">Kids Toddler Girls</h2>
-      <div id="grid-toddler-girls" class="products-grid"></div>
+    <div class="age-category-wrapper">
+      <h2 class="age-category-title">Kids Toddler Girls</h2>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">The Weather Enthusiast Logo Design</h3>
+        <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+        <div id="grid-toddler-girls-we" class="products-grid"></div>
+      </div>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">StormStream Logo Design</h3>
+        <h4 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h4>
+        <div id="grid-toddler-girls-ss" class="products-grid"></div>
+      </div>
     </div>
 
     <!-- Category 5: Youth Boys -->
-    <div class="category-block">
-      <h2 class="category-title-text">Kids Youth Boys</h2>
-      <div id="grid-youth-boys" class="products-grid"></div>
+    <div class="age-category-wrapper">
+      <h2 class="age-category-title">Kids Youth Boys</h2>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">The Weather Enthusiast Logo Design</h3>
+        <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+        <div id="grid-youth-boys-we" class="products-grid"></div>
+      </div>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">StormStream Logo Design</h3>
+        <h4 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h4>
+        <div id="grid-youth-boys-ss" class="products-grid"></div>
+      </div>
     </div>
 
     <!-- Category 6: Youth Girls -->
-    <div class="category-block">
-      <h2 class="category-title-text">Kids Youth Girls</h2>
-      <div id="grid-youth-girls" class="products-grid"></div>
+    <div class="age-category-wrapper">
+      <h2 class="age-category-title">Kids Youth Girls</h2>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">The Weather Enthusiast Logo Design</h3>
+        <h4 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h4>
+        <div id="grid-youth-girls-we" class="products-grid"></div>
+      </div>
+
+      <div class="design-subgroup">
+        <h3 class="sub-section-title">StormStream Logo Design</h3>
+        <h4 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h4>
+        <div id="grid-youth-girls-ss" class="products-grid"></div>
+      </div>
     </div>
   </main>
 
@@ -464,28 +555,36 @@
         });
       }
 
-      // Helper function to build items dynamically for any category block
-      function generateCategoryData(prefixName, count, startId) {
+      // Helper function to build items dynamically
+      function generateCategoryData(prefixName, count, startId, price = "$19.95") {
         const items = [];
         for (let i = 1; i <= count; i++) {
           const uniqueId = startId + i - 1;
           items.push({
             id: uniqueId,
-            name: `${prefixName} Essentials Item #${i}`,
-            price: "$19.95",
+            name: `${prefixName} Item #${i}`,
+            price: price,
             img: ""
           });
         }
         return items;
       }
 
-      // 4. Compile all 57 items across 6 sub-categories
-      const babyBoysData    = generateCategoryData("Baby Boys Weather", 10, 1);
-      const babyGirlsData   = generateCategoryData("Baby Girls Weather", 9, 11);
-      const toddlerBoysData = generateCategoryData("Toddler Boys Weather", 10, 20);
-      const toddlerGirlsData= generateCategoryData("Toddler Girls Weather", 9, 30);
-      const youthBoysData   = generateCategoryData("Youth Boys Weather", 10, 39);
-      const youthGirlsData  = generateCategoryData("Youth Girls Weather", 9, 49);
+      // 4. Data Arrays for "The Weather Enthusiast Logo Design"
+      const babyBoysWE    = generateCategoryData("Baby Boys Weather", 10, 301);
+      const babyGirlsWE   = generateCategoryData("Baby Girls Weather", 9, 311);
+      const toddlerBoysWE = generateCategoryData("Toddler Boys Weather", 10, 320);
+      const toddlerGirlsWE= generateCategoryData("Toddler Girls Weather", 9, 330);
+      const youthBoysWE   = generateCategoryData("Youth Boys Weather", 10, 339);
+      const youthGirlsWE  = generateCategoryData("Youth Girls Weather", 9, 349);
+
+      // 5. Separate Data Arrays for "StormStream Logo Design"
+      const babyBoysSS    = generateCategoryData("Baby Boys StormStream", 10, 401);
+      const babyGirlsSS   = generateCategoryData("Baby Girls StormStream", 9, 411);
+      const toddlerBoysSS = generateCategoryData("Toddler Boys StormStream", 10, 420);
+      const toddlerGirlsSS= generateCategoryData("Toddler Girls StormStream", 9, 430);
+      const youthBoysSS   = generateCategoryData("Youth Boys StormStream", 10, 439);
+      const youthGirlsSS  = generateCategoryData("Youth Girls StormStream", 9, 449);
 
       // Rendering helper function
       function populateGrid(dataArray, targetContainerId) {
@@ -501,13 +600,21 @@
         }
       }
 
-      // Populate grid containers
-      populateGrid(babyBoysData, "grid-baby-boys");
-      populateGrid(babyGirlsData, "grid-baby-girls");
-      populateGrid(toddlerBoysData, "grid-toddler-boys");
-      populateGrid(toddlerGirlsData, "grid-toddler-girls");
-      populateGrid(youthBoysData, "grid-youth-boys");
-      populateGrid(youthGirlsData, "grid-youth-girls");
+      // Render The Weather Enthusiast Grids
+      populateGrid(babyBoysWE, "grid-baby-boys-we");
+      populateGrid(babyGirlsWE, "grid-baby-girls-we");
+      populateGrid(toddlerBoysWE, "grid-toddler-boys-we");
+      populateGrid(toddlerGirlsWE, "grid-toddler-girls-we");
+      populateGrid(youthBoysWE, "grid-youth-boys-we");
+      populateGrid(youthGirlsWE, "grid-youth-girls-we");
+
+      // Render StormStream Grids
+      populateGrid(babyBoysSS, "grid-baby-boys-ss");
+      populateGrid(babyGirlsSS, "grid-baby-girls-ss");
+      populateGrid(toddlerBoysSS, "grid-toddler-boys-ss");
+      populateGrid(toddlerGirlsSS, "grid-toddler-girls-ss");
+      populateGrid(youthBoysSS, "grid-youth-boys-ss");
+      populateGrid(youthGirlsSS, "grid-youth-girls-ss");
     });
   </script>
 </body>
