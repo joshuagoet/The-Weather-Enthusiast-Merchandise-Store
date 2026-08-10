@@ -168,9 +168,34 @@
       font-size: 32px;
       font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       color: #000000;
+    }
+
+    .category-group {
+      margin-bottom: 56px;
+    }
+
+    /* Sub-section Heading Style */
+    .sub-section-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      color: #000000;
+    }
+
+    /* Super-sub-title: Subcategory Headings */
+    .subcategory-heading {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
       text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin: 12px 0 16px 0;
+      color: #000000;
     }
 
     .products-grid,
@@ -310,6 +335,15 @@
         margin-bottom: 20px;
       }
 
+      .sub-section-title {
+        font-size: 20px;
+      }
+
+      .subcategory-heading {
+        font-size: 18px;
+        margin: 12px 0 12px 0;
+      }
+
       /* 2-Column Mobile Product Grid Method */
       .products-grid,
       .product-grid {
@@ -383,7 +417,20 @@
   <!-- Product Catalog Grid -->
   <main class="catalog-container">
     <h1 class="catalog-title">Promotional & Milestone Items</h1>
-    <div id="promo-products-grid" class="products-grid"></div>
+
+    <!-- 1. The Weather Enthusiast Logo Design Subcategory -->
+    <div class="category-group">
+      <h2 class="sub-section-title">The Weather Enthusiast Logo Design</h2>
+      <h3 class="subcategory-heading">THE WEATHER ENTHUSIAST LOGO DESIGN</h3>
+      <div id="weather-enthusiast-promo-grid" class="products-grid"></div>
+    </div>
+
+    <!-- 2. StormStream Logo Design Subcategory -->
+    <div class="category-group">
+      <h2 class="sub-section-title">StormStream Logo Design</h2>
+      <h3 class="subcategory-heading">STORMSTREAM LOGO DESIGN</h3>
+      <div id="stormstream-promo-grid" class="products-grid"></div>
+    </div>
   </main>
 
   <script>
@@ -421,26 +468,41 @@
         });
       }
 
-      // 4. Generate 4 Promotional & Milestone Items
-      const promoItems = [
+      // 4. Data for The Weather Enthusiast Logo Design Items
+      const weatherEnthusiastPromoItems = [
         { id: 1, name: "100k Subscriber Milestone Collector Coin #1", price: "$34.95", img: "", link: "../Home/product_detail.html?item=88" },
         { id: 2, name: "Official Weather Enthusiast Founding Badge #2", price: "$14.95", img: "", link: "../Home/product_detail.html?item=89" },
         { id: 3, name: "Limited Edition Storm Chaser Flag Banner #3", price: "$24.95", img: "", link: "../Home/product_detail.html?item=90" },
         { id: 4, name: "Anniversary Gold-Embossed Commemorative Poster #4", price: "$29.95", img: "", link: "../Home/product_detail.html?item=91" }
       ];
 
-      const gridContainer = document.getElementById("promo-products-grid");
-      if (gridContainer) {
-        gridContainer.innerHTML = promoItems.map(item => `
-          <a href="${item.link}" class="product-card">
-            <div class="card-image-box">
-              <img src="${item.img}" alt="${item.name}" />
-            </div>
-            <div class="card-name">${item.name}</div>
-            <div class="card-price">${item.price}</div>
-          </a>
-        `).join('');
+      // 5. Separate Data for StormStream Logo Design Items
+      const stormStreamPromoItems = [
+        { id: 501, name: "100k Subscriber StormStream Collector Coin #1", price: "$34.95", img: "", link: "../Home/product_detail.html?item=501" },
+        { id: 502, name: "Official StormStream Founding Badge #2", price: "$14.95", img: "", link: "../Home/product_detail.html?item=502" },
+        { id: 503, name: "Limited Edition StormStream Flag Banner #3", price: "$24.95", img: "", link: "../Home/product_detail.html?item=503" },
+        { id: 504, name: "Anniversary StormStream Commemorative Poster #4", price: "$29.95", img: "", link: "../Home/product_detail.html?item=504" }
+      ];
+
+      // Helper function to render grid
+      function renderGrid(itemsArray, containerId) {
+        const container = document.getElementById(containerId);
+        if (container) {
+          container.innerHTML = itemsArray.map(item => `
+            <a href="${item.link}" class="product-card">
+              <div class="card-image-box">
+                <img src="${item.img}" alt="${item.name}" />
+              </div>
+              <div class="card-name">${item.name}</div>
+              <div class="card-price">${item.price}</div>
+            </a>
+          `).join('');
+        }
       }
+
+      // Populate each section with its own distinct items array
+      renderGrid(weatherEnthusiastPromoItems, "weather-enthusiast-promo-grid");
+      renderGrid(stormStreamPromoItems, "stormstream-promo-grid");
     });
   </script>
 </body>
