@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Weather Enthusiast Official Merch Store - All Products</title>
+  <title>The Weather Enthusiast - Official Merch Store</title>
   
   <style>
     /* Native CSS Resets & Foundations */
@@ -19,26 +19,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* 1. Announcement Bar Styles */
-    .announcement-bar {
-      background-color: #00D8FF;
-      color: #000000;
-      text-align: center;
-      padding: 10px 16px;
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .hidden {
-      display: none !important;
-    } 
-
-    /* 2. Header Layout Styles */
+    /* 1. Header Layout Styles */
     .navbar {
       background-color: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid #f3f4f6;
       position: sticky;
       top: 0;
       z-index: 50;
@@ -46,16 +30,16 @@
     }
 
     .navbar-container {
-      max-width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
       height: 96px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 40px;
-      gap: 0;
+      padding: 0 32px;
+      gap: 24px;
     }
 
-    /* Stacked Logo */
     .logo {
       font-family: 'Impact', 'Arial Black', sans-serif;
       font-size: 30px;
@@ -69,8 +53,6 @@
       display: inline-block;
       text-align: left;
       flex-shrink: 0;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .logo span {
@@ -99,36 +81,36 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Desktop Navigation Links */
     .nav-links {
       display: flex;
       gap: 22px;
       white-space: nowrap;
       flex-wrap: nowrap;
       align-items: center;
-      margin-left: 0;
       margin-right: auto;
+      margin-left: auto;
+      padding-right: 20px;
     }
 
     .nav-links a {
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
       color: #1f2937;
       text-decoration: none;
       letter-spacing: 0.01em;
+      transition: color 0.15s ease;
     }
 
     .nav-links a:hover {
       color: #000000;
     }
 
-    /* Right Utilities */
     .nav-utilities {
       display: flex;
       align-items: center;
-      gap: 18px;
-      font-size: 13px;
-      font-weight: 400;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 500;
       flex-shrink: 0;
     }
 
@@ -139,10 +121,10 @@
     }
 
     .currency-selector svg {
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       margin-left: 4px;
-      margin-top: 1px;
+      margin-top: 2px;
     }
 
     .cart-icon {
@@ -156,11 +138,11 @@
       opacity: 0.7;
     }
 
-    /* 3. Featured Single Product Hero Section */
-    .hero-layout {
+    /* 2. Main Product Layout Split Panel */
+    .main-layout {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 56px 48px;
+      padding: 72px 48px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 64px;
@@ -168,12 +150,13 @@
     }
 
     @media (min-width: 1024px) {
-      .hero-layout {
+      .main-layout {
         grid-template-columns: repeat(12, minmax(0, 1fr));
       }
     }
 
-    .hero-image-column {
+    /* Left Side Presenter Box */
+    .image-column {
       grid-column: span 12;
       background-color: #EBEBEB;
       display: flex;
@@ -185,18 +168,19 @@
     }
 
     @media (min-width: 1024px) {
-      .hero-image-column {
+      .image-column {
         grid-column: span 6;
       }
     }
 
-    .hero-image-column img {
-      max-height: 85%;
-      max-width: 85%;
+    .image-column img {
+      max-height: 90%;
+      max-width: 90%;
       object-fit: contain;
     }
 
-    .hero-details-column {
+    /* Right Side Information configuration */
+    .details-column {
       grid-column: span 12;
       display: flex;
       flex-direction: column;
@@ -204,60 +188,67 @@
     }
 
     @media (min-width: 1024px) {
-      .hero-details-column {
+      .details-column {
         grid-column: span 6;
       }
     }
 
     .product-title {
-      font-size: 38px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 4px;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 8px;
     }
 
     .product-price {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 400;
       color: #6b7280;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
     }
 
+    /* Color Selection Dot Layout */
     .section-label {
       font-size: 12px;
       font-weight: 400;
       letter-spacing: 0.05em;
-      color: #6b7280;
+      color: #9ca3af;
       display: block;
       margin-bottom: 12px;
     }
 
     .color-container {
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     .color-dots-row {
       display: flex;
-      gap: 14px;
+      gap: 12px;
     }
 
     .color-dot {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       border: 1px solid transparent;
       cursor: pointer;
       outline: none;
+      transition: transform 0.1s ease;
+    }
+
+    .color-dot:hover {
+      transform: scale(1.05);
     }
 
     .color-dot.active {
-      outline: 1px solid #000000;
+      outline: 2px solid #000000;
       outline-offset: 2px;
     }
 
+    /* Size Selector Grid Layout */
     .size-container {
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     .size-header-row {
@@ -279,24 +270,24 @@
 
     .sizes-grid {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
     }
 
     @media (min-width: 640px) {
       .sizes-grid {
-        grid-template-columns: repeat(9, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
       }
     }
 
     .size-box {
       border: 1px solid #e5e7eb;
       background: #ffffff;
-      padding: 12px 0;
+      padding: 14px 0;
       font-size: 13px;
       font-weight: 600;
       text-align: center;
-      border-radius: 2px;
+      border-radius: 4px;
       cursor: pointer;
       transition: border-color 0.15s ease;
     }
@@ -309,33 +300,35 @@
       border-color: #000000;
       background-color: #ffffff;
       font-weight: 700;
+      outline: 1px solid #000000;
     }
 
+    /* Royal Blue Primary Add To Cart Button */
     .add-to-cart-btn {
       width: 100%;
-      background-color: #2f00ff;
-      color: #FFFFFF;
+      background-color: #1A0DFF;
+      color: #ffffff;
       border: none;
-      height: 54px;
+      height: 56px;
       border-radius: 4px;
       font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       cursor: pointer;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       transition: background-color 0.15s ease, transform 0.1s ease;
     }
 
     .add-to-cart-btn:hover {
-      background-color: #1f029e;
+      background-color: #1300e6;
     }
 
     .add-to-cart-btn:active {
       transform: scale(0.99);
     }
 
-    /* 4. Combined All Products Directory Structure */
+    /* 3. Catalog Layout & Headings */
     .catalog-layout {
       max-width: 1400px;
       margin: 0 auto;
@@ -356,7 +349,6 @@
       margin-bottom: 60px;
     }
 
-    /* Category Headings Base Rule */
     .category-heading {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 32px;
@@ -366,13 +358,11 @@
       color: #000000;
     }
 
-    /* ALL CAPS rule applied specifically to sub-sections without super-sub-sections under them */
     .category-section:not(:has(.subcategory-heading)) .category-heading {
       text-transform: uppercase;
       letter-spacing: 0.01em;
     }
 
-    /* Sub-section Heading Style */
     .sub-section-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 26px;
@@ -383,7 +373,6 @@
       color: #000000;
     }
 
-    /* Super-sub-title: Subcategory Headings */
     .subcategory-heading {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 22px;
@@ -394,14 +383,12 @@
       color: #000000;
     }
 
-    /* Desktop Product Grid (3 Columns) */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px 24px;
     }
 
-    /* Item Card Component */
     .product-card {
       display: flex;
       flex-direction: column;
@@ -446,7 +433,7 @@
       font-weight: 400;
     }
 
-    /* Mobile Viewport Rules */
+    /* 4. Complete Mobile Viewport Rules (max-width: 768px) */
     @media (max-width: 768px) {
       .navbar-container {
         display: grid;
@@ -487,6 +474,7 @@
         border-bottom: 2px solid #f3f4f6;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
         margin: 0;
+        padding-right: 0;
       }
 
       .nav-links.active {
@@ -513,11 +501,34 @@
         transform: translateY(-8.5px) rotate(-45deg);
       }
 
-      .hero-layout {
+      /* Hero Section Mobile Padding and Spacing */
+      .main-layout {
         padding: 24px 16px;
         gap: 32px;
       }
 
+      .image-column {
+        padding: 20px;
+      }
+
+      .product-title {
+        font-size: 28px;
+      }
+
+      .product-price {
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+
+      .color-container {
+        margin-bottom: 24px;
+      }
+
+      .size-container {
+        margin-bottom: 32px;
+      }
+
+      /* Directory Mobile Padding and Spacing */
       .catalog-layout {
         padding: 24px 14px;
       }
@@ -541,7 +552,7 @@
         margin: 16px 0 12px 0;
       }
 
-      /* 2-Column Mobile Grid for Cards */
+      /* 2-Column Mobile Grid for Product Cards */
       .product-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 20px 12px !important;
@@ -564,10 +575,7 @@
 </head>
 <body>
 
-  <!-- 1. Top Announcement Bar -->
-  <div id="top-announcement" class="announcement-bar"></div>
-
-  <!-- 2. Navigation Bar -->
+  <!-- Navigation Header -->
   <nav class="navbar">
     <div class="navbar-container">
       
@@ -577,19 +585,19 @@
         <span></span>
       </button>
 
-      <a href="index.html" class="logo">
-        THE WEATHER
+      <a href="../../Home/index.html" class="logo">
+        <span>THE WEATHER</span>
         <span>ENTHUSIAST</span>
       </a>
-
+      
       <div class="nav-links" id="navLinks">
-        <a href="index.html" class="data-nav-link">Home</a>
-        <a href="All%20Products/all_products.html" class="data-nav-link">All Products</a>
-        <a href="Men%27s%20Apparel/men's_apparel.html" class="data-nav-link">Men's Apparel</a>
-        <a href="Women%27s%20Apparel/women's_apparel.html" class="data-nav-link">Women's Apparel</a>
-        <a href="Kids%20Apparel/kids_apparel.html" class="data-nav-link">Kids Apparel</a>
-        <a href="Drinkware,%20Gear,%20%26%20Accessories/drinkware_gear_and_accessories.html" class="data-nav-link">Drinkware, Gear, & Accessories</a>
-        <a href="Promotional%20%26%20Milestone%20Items/promotional_and_milestone_items.html" class="data-nav-link">Promotional & Milestone Items</a>
+        <a href="../../Home/index.html" class="data-nav-link">Home</a>
+        <a href="../../All%20Products/all_products.html" class="data-nav-link">All Products</a>
+        <a href="../men's_apparel.html" class="data-nav-link">Men's Apparel</a>
+        <a href="../../Women's%20Apparel/women's_apparel.html" class="data-nav-link">Women's Apparel</a>
+        <a href="../../Kids%20Apparel/kids_apparel.html" class="data-nav-link">Kids Apparel</a>
+        <a href="../../Drinkware,%20Gear,%20&%20Accessories/drinkware_gear_and_accessories.html" class="data-nav-link">Drinkware, Gear, & Accessories</a>
+        <a href="../../Promotional%20&%20Milestone%20Items/promotional_and_milestone_items.html" class="data-nav-link">Promotional & Milestone Items</a>
       </div>
 
       <div class="nav-utilities">
@@ -597,7 +605,7 @@
           <span>USD</span>
           <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
         </div>
-        <a href="index.html" class="cart-icon" aria-label="View Cart">
+        <a href="../../Home/index.html" class="cart-icon" aria-label="View Cart">
           <svg style="width: 22px; height: 22px;" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
           </svg>
@@ -607,52 +615,49 @@
     </div>
   </nav>
 
-  <!-- 3. Featured Single Product Hero Section -->
-  <section class="hero-layout">
-    <div class="hero-image-column">
-      <img src="" alt="Featured Product" />
+  <!-- Two-Column Product Details View Layout (Top Card Hero) -->
+  <main class="main-layout">
+    <div class="image-column">
+      <img id="detail-image" src="" alt="Image coming soon" />
     </div>
 
-    <div class="hero-details-column">
-      <h1 class="product-title">Men's Hailinator Premium Tee</h1>
-      <div class="product-price">$29.95</div>
+    <div class="details-column">
+      <h1 id="detail-title" class="product-title">Standard T-Shirts</h1>
+      <div id="detail-price" class="product-price">$29.95</div>
 
-      <!-- Color Selector -->
       <div class="color-container">
-        <span class="section-label">COLOR: BLACK</span>
+        <span class="section-label">Select color: <strong id="active-color-label">Black</strong></span>
         <div class="color-dots-row">
-          <button class="color-dot active" style="background-color: #000000;" aria-label="Select Black"></button>
-          <button class="color-dot" style="background-color: #333333;" aria-label="Select Dark Gray"></button>
-          <button class="color-dot" style="background-color: #00D8FF;" aria-label="Select Cyan"></button>
+          <button class="color-dot active" style="background-color: #1A1A1A;" data-color="Black"></button>
+          <button class="color-dot" style="background-color: #1E293B;" data-color="Navy Blue"></button>
+          <button class="color-dot" style="background-color: #38BDF8;" data-color="Cyan Sky"></button>
+          <button class="color-dot" style="background-color: #475569;" data-color="Slate Gray"></button>
+          <button class="color-dot" style="background-color: #065F46;" data-color="Emerald Green"></button>
         </div>
       </div>
 
-      <!-- Size Matrix Selector -->
       <div class="size-container">
         <div class="size-header-row">
-          <span class="section-label" style="margin-bottom:0;">SIZE</span>
+          <span class="section-label" style="margin-bottom: 0;">Select size</span>
           <a href="#" class="size-guide-link">Size guide</a>
         </div>
+        
         <div class="sizes-grid">
-          <button class="size-box">XS</button>
-          <button class="size-box active">S</button>
-          <button class="size-box">M</button>
-          <button class="size-box">L</button>
-          <button class="size-box">XL</button>
-          <button class="size-box">2XL</button>
-          <button class="size-box">3XL</button>
-          <button class="size-box">4XL</button>
-          <button class="size-box">5XL</button>
+          <button class="size-box" data-price="$29.95">XS</button>
+          <button class="size-box" data-price="$29.95">S</button>
+          <button class="size-box active" data-price="$29.95">M</button>
+          <button class="size-box" data-price="$29.95">L</button>
+          <button class="size-box" data-price="$29.95">XL</button>
+          <button class="size-box" data-price="$32.95">2XL</button>
         </div>
       </div>
 
-      <!-- Add to Cart CTA -->
-      <button class="add-to-cart-btn">ADD TO CART</button>
+      <button class="add-to-cart-btn">Add to Cart</button>
     </div>
-  </section>
+  </main>
 
-  <!-- 4. Combined All Products Directory Section -->
-  <main class="catalog-layout">
+  <!-- Combined All Products Directory Section -->
+  <section class="catalog-layout">
     <h1 class="page-title">All Products</h1>
 
     <!-- SECTION 1: MEN'S APPAREL -->
@@ -1109,7 +1114,7 @@
         <a href="../Home/product_detail.html?item=91" class="product-card"><div class="product-card-image"><img src="" alt="Anniversary Gold-Embossed Commemorative Poster #4" /></div><div class="product-card-title">Anniversary Gold-Embossed Commemorative Poster #4</div><div class="product-card-price">$29.95</div></a>
       </div>
     </section>
-  </main>
+  </section>
 
   <!-- JavaScript Logic -->
   <script>
@@ -1149,6 +1154,35 @@
           navMenuContainer.classList.toggle('active');
         });
       }
+
+      // 4. Color & Size Selectors
+      const priceLabel = document.getElementById('detail-price');
+      const sizeBoxes = document.querySelectorAll(".size-box");
+
+      sizeBoxes.forEach(box => {
+        box.addEventListener("click", function() {
+          sizeBoxes.forEach(b => b.classList.remove("active"));
+          this.classList.add("active");
+          
+          const newPrice = this.getAttribute("data-price");
+          if (priceLabel && newPrice) {
+            priceLabel.textContent = newPrice;
+          }
+        });
+      });
+
+      const colorDots = document.querySelectorAll(".color-dot");
+      const colorLabel = document.getElementById("active-color-label");
+
+      colorDots.forEach(dot => {
+        dot.addEventListener("click", function() {
+          colorDots.forEach(d => d.classList.remove("active"));
+          this.classList.add("active");
+          if (colorLabel) {
+            colorLabel.textContent = this.getAttribute("data-color");
+          }
+        });
+      });
     });
   </script>
 </body>
